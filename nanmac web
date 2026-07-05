@@ -1,0 +1,430 @@
+## `index.html`
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nanmac Electronics | M-KOPA Phones, Repair Centre & Accessories — Mombasa, Kenya</title>
+    <meta name="description" content="Nanmac Electronics — Official M-KOPA agent, professional mobile phone repair (Fundi wa Simu), & Kilimall Pick-Up Station at Kadongo Shopping Centre, Mshomoroni, Kisauni, Mombasa." />
+    <meta name="keywords" content="Nanmac Electronics, M-KOPA phones Mombasa, phone repair Mombasa, fundi wa simu Mombasa, screen replacement Mombasa, Kilimall agent Mombasa, mobile phone shop Kisauni, electronics shop Mshomoroni" />
+    <meta name="author" content="Nanmac Electronics — Amos Njenga" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="geo.region" content="KE-300" />
+    <meta name="geo.placename" content="Mshomoroni, Kisauni, Mombasa" />
+    <meta name="geo.position" content="-4.0267;39.6580" />
+    <meta name="ICBM" content="-4.0267, 39.6580" />
+    <link rel="canonical" href="https://nanmacelectronics.co.ke/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nanmacelectronics.co.ke/" />
+    <meta property="og:title" content="Nanmac Electronics | M-KOPA Phones, Repair Centre & Accessories — Mombasa" />
+    <meta property="og:description" content="Official M-KOPA agent, professional phone repair (Fundi wa Simu) & Kilimall Pick-Up Station at Kadongo Shopping Centre, Mshomoroni, Kisauni, Mombasa." />
+    <meta property="og:image" content="https://media.base44.com/images/public/6a496bb4ec27649e1dc7706b/ead0d9b32_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_KE" />
+    <meta property="og:site_name" content="Nanmac Electronics" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nanmac Electronics | M-KOPA Phones & Repair Centre, Mombasa" />
+    <meta name="twitter:description" content="Official M-KOPA agent, Fundi wa Simu & Kilimall Pick-Up Station at Mshomoroni, Kisauni, Mombasa." />
+    <meta name="twitter:image" content="https://media.base44.com/images/public/6a496bb4ec27649e1dc7706b/ead0d9b32_image.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["ElectronicsStore", "LocalBusiness"],
+      "name": "Nanmac Electronics",
+      "description": "Official M-KOPA phone agent, professional mobile phone repair centre and Kilimall Pick-Up Station at Kadongo Shopping Centre, Mshomoroni, Kisauni, Mombasa.",
+      "url": "https://nanmacelectronics.co.ke",
+      "telephone": "+254712951363",
+      "founder": { "@type": "Person", "name": "Amos Njenga" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kadongo Shopping Centre, Mshomoroni",
+        "addressLocality": "Kisauni",
+        "addressRegion": "Mombasa County",
+        "postalCode": "80100",
+        "addressCountry": "KE"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": "-4.0267", "longitude": "39.6580" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "17:00" }
+      ],
+      "priceRange": "KES",
+      "paymentAccepted": "Cash, M-PESA"
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+```
+
+---
+
+## `tailwind.config.js`
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
+  content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+  theme: {
+    extend: {
+      borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+      colors: {
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+        primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+        secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+        muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        cobalt: { 50:'#EEF5FF',100:'#D9EAFF',500:'#0057B8',600:'#0049A0',700:'#003A80',900:'#001E45' },
+        amber: { 400:'#FFAA00',500:'#FF8C00',600:'#E67A00' },
+        obsidian: { DEFAULT:'#0B0D11',900:'#0B0D11',800:'#13161C',700:'#1C2028',600:'#252A34' },
+        brand: { blue:'#0057B8', amber:'#FF8C00', dark:'#0B0D11', white:'#FFFFFF' }
+      },
+      fontFamily: {
+        heading: ['Plus Jakarta Sans','ui-sans-serif','system-ui','sans-serif'],
+        body: ['Inter','ui-sans-serif','system-ui','sans-serif'],
+        sans: ['Inter','ui-sans-serif','system-ui','sans-serif'],
+      },
+      keyframes: {
+        'accordion-down': { from:{height:'0'}, to:{height:'var(--radix-accordion-content-height)'} },
+        'accordion-up': { from:{height:'var(--radix-accordion-content-height)'}, to:{height:'0'} },
+        'fade-up': { from:{opacity:'0',transform:'translateY(24px) scale(0.97)'}, to:{opacity:'1',transform:'translateY(0) scale(1)'} },
+        'fade-in': { from:{opacity:'0'}, to:{opacity:'1'} },
+        'pulse-ring': { '0%':{transform:'scale(1)',opacity:'0.4'}, '100%':{transform:'scale(1.6)',opacity:'0'} },
+        'float': { '0%,100%':{transform:'translateY(0)'}, '50%':{transform:'translateY(-8px)'} },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-up': 'fade-up 0.6s ease-out both',
+        'fade-in': 'fade-in 0.4s ease-out both',
+        'pulse-ring': 'pulse-ring 2s ease-out infinite',
+        'float': 'float 3s ease-in-out infinite',
+      },
+    }
+  },
+  safelist: ['bg-cobalt-500','bg-cobalt-600','text-cobalt-500','bg-amber-500','bg-amber-600','text-amber-500','bg-obsidian'],
+  plugins: [require("tailwindcss-animate")],
+}
+```
+
+---
+
+## `src/data/products.js`
+```js
+export const WA_NUMBER = "254712951363";
+export const WA_BASE = `https://wa.me/${WA_NUMBER}`;
+export const waLink = (msg) => `${WA_BASE}?text=${encodeURIComponent(msg)}`;
+
+export const smartphones = [
+  { id:"sm-samsung", brand:"Samsung", model:"Samsung Galaxy Series", features:["Galaxy A, M & S Series","AMOLED Displays","5G Ready Models","Knox Security"], image:"https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in Samsung smartphones. Please share available models and prices." },
+  { id:"sm-tecno", brand:"Tecno", model:"Tecno Smartphones", features:["Long Battery Life","AI Triple Camera","Helio Processors","Affordable Pricing"], image:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in Tecno smartphones. Please share available models and prices." },
+  { id:"sm-infinix", brand:"Infinix", model:"Infinix Smartphones", features:["Fast Charging","Large HD Displays","Gaming-Ready CPUs","Dual SIM"], image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in Infinix smartphones. Please share available models and prices." },
+  { id:"sm-itel", brand:"itel", model:"itel Smartphones", features:["Budget-Friendly","Reliable Battery","Dual SIM","Basic to Mid Range"], image:"https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in itel smartphones. Please share available models and prices." },
+  { id:"sm-xiaomi", brand:"Xiaomi", model:"Xiaomi Smartphones", features:["MIUI Experience","Flagship Cameras","HyperOS Ready","Snapdragon Powered"], image:"https://images.unsplash.com/photo-1567581935884-3349723552ca?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in Xiaomi smartphones. Please share available models and prices." },
+  { id:"sm-redmi", brand:"Redmi", model:"Redmi Series", features:["Value Flagship","High Refresh Rate","Fast Charge Support","Large Battery"], image:"https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in Redmi smartphones. Please share available models and prices." },
+  { id:"sm-nokia", brand:"Nokia", model:"Nokia Smartphones", features:["Pure Android","Durable Build","Regular Updates","Trusted Brand"], image:"https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in Nokia smartphones. Please share available models and prices." },
+  { id:"sm-oppo", brand:"Oppo", model:"Oppo Smartphones", features:["VOOC Fast Charging","AI Portrait Camera","ColorOS","Stylish Design"], image:"https://images.unsplash.com/photo-1644501616078-b7b44a3eb36c?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in Oppo smartphones. Please share available models and prices." },
+  { id:"sm-vivo", brand:"Vivo", model:"Vivo Smartphones", features:["Gimbal Camera","FunTouch OS","Slim Profile","Ultra-fast Charging"], image:"https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in Vivo smartphones. Please share available models and prices." },
+  { id:"sm-realme", brand:"Realme", model:"Realme Smartphones", features:["Dare to Leap","SuperDart Charge","Pro-Grade Cameras","Gaming Focus"], image:"https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=400&h=400&fit=crop", waMsg:"Hello Nanmac Electronics, I'm interested in Realme smartphones. Please share available models and prices." },
+];
+
+export const accessories = [
+  { id:"ac-01", name:"Original Chargers", category:"Charging", desc:"Genuine brand-certified chargers for all phone models", image:"https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=400&h=300&fit=crop" },
+  { id:"ac-02", name:"Fast Chargers", category:"Charging", desc:"Quick-charge adapters supporting 18W–65W fast charging", image:"https://images.unsplash.com/photo-1621972660772-6a0427d5e5a2?w=400&h=300&fit=crop" },
+  { id:"ac-03", name:"USB Type-C Cables", category:"Cables", desc:"Durable braided USB-C cables for data and fast charging", image:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" },
+  { id:"ac-06", name:"Wired Earphones", category:"Audio", desc:"Crisp sound quality wired earphones with inline mic", image:"https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=300&fit=crop" },
+  { id:"ac-07", name:"Wireless Earbuds", category:"Audio", desc:"True wireless stereo earbuds with charging case", image:"https://images.unsplash.com/photo-1572435555646-7ad9a149ad91?w=400&h=300&fit=crop" },
+  { id:"ac-09", name:"Bluetooth Headphones", category:"Audio", desc:"Over-ear Bluetooth headphones with deep bass", image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" },
+  { id:"ac-14", name:"Phone Covers & Cases", category:"Protection", desc:"Silicone, leather & hard-shell cases for all models", image:"https://images.unsplash.com/photo-1601972599720-36938d4ecd31?w=400&h=300&fit=crop" },
+  { id:"ac-15", name:"Tempered Glass", category:"Protection", desc:"9H hardness screen protectors with oleophobic coating", image:"https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=400&h=300&fit=crop" },
+  { id:"ac-17", name:"Flash Disks", category:"Storage", desc:"USB 3.0 flash drives in 8GB to 256GB capacities", image:"https://images.unsplash.com/photo-1512054502232-10a0a035d672?w=400&h=300&fit=crop" },
+  { id:"ac-18", name:"Memory Cards", category:"Storage", desc:"Class 10 & UHS-I microSD cards for phones and cameras", image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400&h=300&fit=crop" },
+  { id:"ac-22", name:"Power Banks", category:"Charging", desc:"10,000–30,000mAh portable power banks with fast charging", image:"https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&h=300&fit=crop" },
+  { id:"ac-23", name:"Bluetooth Speakers", category:"Audio", desc:"Portable waterproof Bluetooth speakers with deep bass", image:"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=300&fit=crop" },
+  { id:"ac-24", name:"Smart Watches", category:"Wearables", desc:"Fitness tracking smartwatches with health monitoring", image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop" },
+];
+
+export const accessoryCategories = ["All","Charging","Cables","Audio","Protection","Storage","Adapters","Holders","Wearables","Accessories"];
+
+export const smallElectronics = [
+  { id:"el-01", name:"Bluetooth Speakers", desc:"Portable 360° wireless speakers for indoor & outdoor", image:"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=300&fit=crop" },
+  { id:"el-02", name:"Portable Radios", desc:"AM/FM mini radios with rechargeable batteries", image:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" },
+  { id:"el-03", name:"Portable Fans", desc:"USB & rechargeable mini fans for home and travel", image:"https://images.unsplash.com/photo-1513506003901-1e6a35ac86a8?w=400&h=300&fit=crop" },
+  { id:"el-04", name:"LED Torches", desc:"High-lumen rechargeable LED torches & flashlights", image:"https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=300&fit=crop" },
+  { id:"el-05", name:"LED Bulbs", desc:"Energy-saving LED bulbs in various wattages", image:"https://images.unsplash.com/photo-1518704618243-b719e5d5f2b8?w=400&h=300&fit=crop" },
+  { id:"el-07", name:"Rechargeable Lamps", desc:"Solar & USB rechargeable study and reading lamps", image:"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=300&fit=crop" },
+  { id:"el-08", name:"Extension Sockets", desc:"Multi-socket extension boards with surge protection", image:"https://images.unsplash.com/photo-1558002038-1055907df827?w=400&h=300&fit=crop" },
+];
+
+export const hardwareRepairs = [
+  "Screen Replacement","LCD Replacement","OLED Display Replacement","Touch Screen Repair",
+  "Battery Replacement","Charging Port Replacement","USB Port Repair","Microphone Repair",
+  "Loudspeaker Repair","Earpiece Repair","Back Glass Replacement","Camera Replacement",
+  "Front Camera Repair","Rear Camera Repair","Power Button Repair","Volume Button Repair",
+  "Fingerprint Sensor Repair","Face ID Hardware Repair","SIM Card Reader Repair",
+  "Memory Card Slot Repair","Motherboard Repair","Water Damage Repair","Liquid Damage Cleaning",
+  "IC Replacement","Soldering Services","Flex Cable Replacement","Hinge Repairs (Foldable Phones)",
+  "Phone Housing Replacement","Frame Replacement","Phone Cleaning","Diagnostic Services",
+];
+
+export const softwareServices = [
+  "Android Software Installation","Firmware Flashing","Phone Unlocking","FRP Removal",
+  "Google Account Removal","Factory Reset","Software Updates","Virus Removal",
+  "Boot Loop Repair","Dead Phone Recovery","IMEI Repair (Where Legally Permitted)",
+  "System Optimization","Data Backup","Data Recovery","Phone Setup","App Installation",
+  "Operating System Reinstallation","Password Removal","Pattern Unlock","Phone Migration",
+  "Device Health Check","Mobile Security Installation",
+];
+
+export const testimonials = [
+  { name:"Fatuma Abdalla", location:"Mshomoroni, Mombasa", stars:5, text:"Nanmac Electronics replaced my cracked screen in under an hour! The quality is perfect and the price was very fair. Amos is so honest and professional. I highly recommend this shop to everyone in Kisauni!" },
+  { name:"James Kariuki", location:"Kisauni, Mombasa", stars:5, text:"I bought a Tecno Camon phone here and the service was excellent. They gave me genuine accessories and even helped me set it up. This is the best electronics shop in Mombasa without a doubt!" },
+  { name:"Aisha Mwarabu", location:"Bamburi, Mombasa", stars:5, text:"My Samsung Galaxy had a charging port problem. Nanmac Electronics fixed it the same day! Very affordable and honest shop. The owner is friendly and explains everything clearly. I will always come back here." },
+  { name:"Peter Njoroge", location:"Shanzu, Mombasa", stars:5, text:"I picked up my Kilimall parcel here and was impressed by how organized and clean the shop is. They helped me right away. Now I shop here for all my phone accessories. Best service in Kadongo!" },
+  { name:"Halima Suleiman", location:"Junda, Mombasa", stars:5, text:"I got an M-KOPA phone through Nanmac Electronics and the process was so smooth. Amos guided me through every step via WhatsApp. Now I have a great smartphone on easy monthly payments!" },
+  { name:"David Omondi", location:"Mombasa", stars:5, text:"They recovered all my important data from my crashed phone when I thought it was gone forever! Excellent data recovery service. Very professional technicians. 100% satisfied with their work." },
+];
+
+export const whyChooseUs = [
+  { icon:"ShieldCheck", title:"Genuine Products", desc:"100% authentic phones & accessories. No counterfeits, ever." },
+  { icon:"Tag", title:"Affordable Prices", desc:"Competitive prices that match Mombasa's local market needs." },
+  { icon:"Wrench", title:"Professional Repairs", desc:"Skilled technicians with years of hands-on repair experience." },
+  { icon:"UserCheck", title:"Experienced Technicians", desc:"Certified experts handling both hardware and software issues." },
+  { icon:"MessageCircle", title:"Fast WhatsApp Support", desc:"Instant responses on WhatsApp — quick answers, no waiting." },
+  { icon:"BadgeCheck", title:"Warranty on Repairs", desc:"Selected repair services come with a warranty guarantee." },
+  { icon:"Smartphone", title:"M-KOPA Phones", desc:"Official M-KOPA agent — own a smartphone on easy payments." },
+  { icon:"Package", title:"Kilimall Pick-Up", desc:"Official Kilimall Pick-Up Station for safe parcel collection." },
+  { icon:"Heart", title:"Friendly Service", desc:"Welcoming, patient, and helpful staff every single visit." },
+  { icon:"Zap", title:"Quick Turnaround", desc:"Most repairs done same-day. We value your time." },
+  { icon:"Star", title:"Trusted Locally", desc:"Proudly serving thousands of satisfied customers in Mombasa." },
+];
+```
+
+---
+
+## `src/components/VisitorTracker.jsx`
+```jsx
+import { useEffect } from "react";
+
+const VISITOR_KEY = "nanmac_visitors";
+const VISIT_FLAG = "nanmac_visited_session";
+
+export default function VisitorTracker() {
+  useEffect(() => {
+    const isNew = !sessionStorage.getItem(VISIT_FLAG);
+    if (isNew) {
+      sessionStorage.setItem(VISIT_FLAG, "true");
+      const stored = JSON.parse(localStorage.getItem(VISITOR_KEY) || "{}");
+      const today = new Date().toISOString().slice(0, 10);
+      stored.total = (stored.total || 0) + 1;
+      stored.today = stored.todayDate === today ? (stored.today || 0) + 1 : 1;
+      stored.todayDate = today;
+      stored.history = stored.history || [];
+      const dayEntry = stored.history.find(h => h.date === today);
+      if (dayEntry) dayEntry.count += 1;
+      else stored.history.push({ date: today, count: 1 });
+      if (stored.history.length > 7) stored.history = stored.history.slice(-7);
+      localStorage.setItem(VISITOR_KEY, JSON.stringify(stored));
+    }
+  }, []);
+  return null;
+}
+```
+
+---
+
+## `src/components/SectionReveal.jsx`
+```jsx
+import { motion } from "framer-motion";
+
+export default function SectionReveal({ children, className = "", delay = 0 }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24, scale: 0.97 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+```
+
+---
+
+## `src/components/FloatingWhatsApp.jsx`
+```jsx
+import { MessageCircle } from "lucide-react";
+import { waLink } from "@/data/products";
+
+export default function FloatingWhatsApp() {
+  return (
+    <a
+      href={waLink("Hello Nanmac Electronics! I'd like to make an inquiry.")}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 group"
+      aria-label="Chat on WhatsApp"
+    >
+      <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-25 animate-pulse-ring pointer-events-none" />
+      <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-15 animate-pulse-ring [animation-delay:0.5s] pointer-events-none" />
+      <div className="relative w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 group-hover:scale-110 transition-transform duration-200">
+        <MessageCircle size={26} className="text-white" fill="white" />
+      </div>
+      <div className="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+        <div className="bg-[#0B0D11] text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xl border border-white/10">
+          Ask on WhatsApp
+        </div>
+      </div>
+    </a>
+  );
+}
+```
+
+---
+
+## `src/components/Layout.jsx`
+```jsx
+import VisitorTracker from "@/components/VisitorTracker";
+import { Outlet } from "react-router-dom";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import FloatingWhatsApp from "./FloatingWhatsApp";
+
+export default function Layout() {
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <Navbar />
+      <main className="flex-1">
+        <Outlet />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
+      <VisitorTracker />
+    </div>
+  );
+}
+```
+
+---
+
+## `src/pages/AdminLogin.jsx`
+```jsx
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Lock, Phone, Eye, EyeOff, ShieldCheck } from "lucide-react";
+import { motion } from "framer-motion";
+
+const DEFAULT_PHONE = "0712951363";
+const DEFAULT_PASSWORD = "nanmac";
+
+export default function AdminLogin() {
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const getSavedPassword = () => localStorage.getItem("nanmac_admin_password") || DEFAULT_PASSWORD;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+    setTimeout(() => {
+      const normalizedPhone = phone.replace(/\s+/g, "").replace(/^\+254/, "0");
+      if (normalizedPhone === DEFAULT_PHONE && password === getSavedPassword()) {
+        sessionStorage.setItem("nanmac_admin", "true");
+        navigate("/admin/dashboard");
+      } else {
+        setError("Invalid mobile number or password. Please try again.");
+      }
+      setLoading(false);
+    }, 800);
+  };
+
+  return (
+    <div className="min-h-screen bg-[#0B0D11] flex items-center justify-center px-4">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#0057B8]/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-[#FF8C00]/10 rounded-full blur-3xl" />
+      </div>
+      <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="relative w-full max-w-sm">
+        <div className="bg-[#13161C] border border-white/10 rounded-3xl p-8 shadow-2xl">
+          <div className="text-center mb-8">
+            <div className="w-14 h-14 bg-[#0057B8] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/20">
+              <ShieldCheck size={28} className="text-white" />
+            </div>
+            <h1 className="text-white font-black text-2xl font-heading">Admin Panel</h1>
+            <p className="text-gray-400 text-sm mt-1">Nanmac Electronics · Mombasa</p>
+          </div>
+          {error && <div className="mb-5 p-3 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm text-center">{error}</div>}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2 block">Mobile Number</label>
+              <div className="relative">
+                <Phone size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500" />
+                <input type="tel" placeholder="e.g. 0712 951 363" value={phone} onChange={(e) => setPhone(e.target.value)} required
+                  className="w-full bg-white/5 border border-white/10 text-white placeholder-gray-600 rounded-xl pl-10 pr-4 py-3 text-sm focus:outline-none focus:border-[#0057B8] focus:ring-1 focus:ring-[#0057B8] transition-all" />
+              </div>
+            </div>
+            <div>
+              <label className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2 block">Password</label>
+              <div className="relative">
+                <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500" />
+                <input type={showPassword ? "text" : "password"} placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required
+                  className="w-full bg-white/5 border border-white/10 text-white placeholder-gray-600 rounded-xl pl-10 pr-10 py-3 text-sm focus:outline-none focus:border-[#0057B8] focus:ring-1 focus:ring-[#0057B8] transition-all" />
+                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300">
+                  {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
+                </button>
+              </div>
+            </div>
+            <button type="submit" disabled={loading}
+              className="w-full bg-[#0057B8] hover:bg-[#0049A0] disabled:opacity-60 text-white font-bold py-3 rounded-xl transition-all hover:shadow-lg hover:shadow-blue-500/20 mt-2">
+              {loading ? "Verifying..." : "Login to Admin Panel"}
+            </button>
+          </form>
+          <p className="text-center text-gray-600 text-xs mt-6">Nanmac Electronics · Admin Access Only</p>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+```
+
+---
+
+## Notes for GitHub Setup
+
+1. **Initialize repo:**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit — Nanmac Electronics website"
+   git remote add origin https://github.com/YOUR_USERNAME/nanmac-electronics.git
+   git push -u origin main
+   ```
+
+2. **Environment:** This project runs on **Base44** (base44.com). For pure static hosting (Vercel/Netlify), remove Base44 SDK references from `src/api/base44Client.js` and `src/lib/AuthContext.jsx`.
+
+3. **To change WhatsApp number:** Edit line 1 of `src/data/products.js` — it updates all WhatsApp buttons across the entire site automatically.
+
+4. **Admin credentials:**
+   - Phone: `0712951363`
+   - Password: `nanmac` (changeable from admin dashboard)
