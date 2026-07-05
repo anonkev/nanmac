@@ -1,3 +1,5 @@
+# nanmac
+
 # Hi, I’m [Your Name] 👋
 
 I build things that solve real problems — clean, maintainable code and delightful user experiences. I’m a [profession: e.g., Software Engineer, Designer, Data Scientist] with a passion for open source, thoughtful architecture, and learning every day.
